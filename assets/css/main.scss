@@ -41,3 +41,39 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
+/* ===== Publications Style (Custom) ===== */
+
+.pub-venue {
+  font-size: 13px;
+  color: #666;
+  margin-top: -6px;
+  margin-bottom: 4px;
+}
+
+.pub-authors {
+  font-size: 13px;
+  color: #444;
+  margin-bottom: 4px;
+}
+
+.pub-links {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.pub-links a {
+  color: #0066cc;
+  text-decoration: none;
+  margin-right: 6px;
+}
+
+.pub-links a:hover {
+  text-decoration: underline;
+}
+
+/* optional：让每篇论文更像卡片 */
+.archive__item {
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
