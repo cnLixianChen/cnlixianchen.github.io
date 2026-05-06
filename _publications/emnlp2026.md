@@ -8,5 +8,4 @@ venue: "Under Review at EMNLP 2026 (CCF-B)"
 
 citation: "Lixian Chen, Jianhong Tan"
 
-paperurl: "#"
 ---
