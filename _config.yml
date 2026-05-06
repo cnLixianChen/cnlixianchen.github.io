@@ -13,10 +13,10 @@ title                    : "Lixian Chen"
 title_separator          : "-"
 name                     : &name "Lixian Chen"
 description              : &description "Lixian Chen's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
-url                      : "https://jac4861.github.io" # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
+url                      : "https://cnlixianchen.github.io" # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "JAC4861/jac4861.github.io"
+repository               : "cnlixianchen/cnlixianchen.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -24,7 +24,7 @@ repository               : "JAC4861/jac4861.github.io"
 author:
   avatar           : "profile.png"
   name             : "Lixian Chen"
-  bio              : "Undergraduate student interested in Data Mining and Computer Vision."
+  bio              : "Undergraduate focusing on Multimodal Learning, Vision-Language Models, and Robust Model Adaptation."
   location         : "Guangzhou, China"
   employer         : "Guangdong University of Technology"
   email            : "lix.chen41@gmail.com"
@@ -205,16 +205,10 @@ kramdown:
 
 # These settings control the types of collections used by the template
 collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
   publications:
     output: true
     permalink: /:collection/:path/
   portfolio:
-    output: true
-    permalink: /:collection/:path/
-  talks:
     output: true
     permalink: /:collection/:path/
 
