@@ -9,14 +9,29 @@ redirect_from:
 
 Hi! I am **Lixian Chen**, an undergraduate student at **Guangdong University of Technology**.
 
-My research focuses on **multimodal learning**, **vision-language models**, and **model adaptation under distribution shift**.  
-Recently, I have been working on topics such as test-time adaptation, low-rank adaptation for large language models, and geometric learning in hyperbolic spaces.
+My research focuses on **multimodal learning**, **vision-language models**.  
+Recently, I have been working on topics such as test-time adaptation and geometric learning in hyperbolic spaces.
 
-<! ## About Me
+{% comment %}
+## About Me
 
 I am currently engaged in research on robust and generalizable machine learning models.  
 This homepage summarizes my recent work, including publications and ongoing research projects.
-!>
+{% endcomment %}
+
+## News
+
+<div class="home-news">
+<ul>
+{% for post in site.posts limit:2 %}
+  <li>
+    <span class="home-news-date">[{{ post.date | date: "%Y.%m" }}]</span>
+    {{ post.content | markdownify | remove: '<p>' | remove: '</p>' }}
+  </li>
+{% endfor %}
+</ul>
+</div>
+
 ## Publications
 
 {% include base_path %}
