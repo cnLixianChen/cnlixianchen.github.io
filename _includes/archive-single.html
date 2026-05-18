@@ -11,12 +11,14 @@
 
     <!-- Title -->
     <h2 class="archive__item-title" itemprop="headline">
-      <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+      {{ title }}
     </h2>
 
     <!-- Venue / Status -->
     {% if post.collection == 'publications' and post.venue %}
-      <p class="pub-venue"><i>{{ post.venue }}</i></p>
+      <p class="pub-venue {% if post.status == 'under-review' %}pub-venue--under-review{% endif %}">
+        <i>{{ post.venue }}</i>
+      </p>
     {% endif %}
 
     <!-- Authors -->
