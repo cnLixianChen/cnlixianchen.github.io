@@ -14,10 +14,9 @@
       {{ title }}
     </h2>
 
-    <!-- Venue / Status -->
+    <!-- Venue -->
     {% if post.collection == 'publications' and post.venue %}
-      {% assign venue_lower = post.venue | downcase %}
-      <p class="pub-venue {% if venue_lower contains 'under review' %}pub-venue--under-review{% elsif venue_lower contains 'accepted' %}pub-venue--accepted{% endif %}">
+      <p class="pub-venue">
         <i>{{ post.venue }}</i>
       </p>
     {% endif %}
@@ -28,27 +27,29 @@
     {% endif %}
 
     <!-- Links -->
-    <p class="pub-links">
-      {% if post.paperurl %}
-        <a href="{{ post.paperurl }}">Paper</a>
-      {% endif %}
+    {% if post.paperurl or post.slidesurl or post.bibtexurl or post.code or post.arxiv %}
+      <p class="pub-links">
+        {% if post.paperurl %}
+          <a href="{{ post.paperurl }}">Paper</a>
+        {% endif %}
 
-      {% if post.slidesurl %}
-        | <a href="{{ post.slidesurl }}">Slides</a>
-      {% endif %}
+        {% if post.slidesurl %}
+          | <a href="{{ post.slidesurl }}">Slides</a>
+        {% endif %}
 
-      {% if post.bibtexurl %}
-        | <a href="{{ post.bibtexurl }}">BibTeX</a>
-      {% endif %}
+        {% if post.bibtexurl %}
+          | <a href="{{ post.bibtexurl }}">BibTeX</a>
+        {% endif %}
 
-      {% if post.code %}
-        | <a href="{{ post.code }}">Code</a>
-      {% endif %}
+        {% if post.code %}
+          | <a href="{{ post.code }}">Code</a>
+        {% endif %}
 
-      {% if post.arxiv %}
-        | <a href="{{ post.arxiv }}">arXiv</a>
-      {% endif %}
-    </p>
+        {% if post.arxiv %}
+          | <a href="{{ post.arxiv }}">arXiv</a>
+        {% endif %}
+      </p>
+    {% endif %}
 
   </article>
 </div>
