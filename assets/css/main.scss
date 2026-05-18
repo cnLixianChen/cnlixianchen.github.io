@@ -41,6 +41,26 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
+
+/* ===== Global Font Style (Custom) ===== */
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+               Arial, "PingFang SC", "Microsoft YaHei", "Noto Sans",
+               "Liberation Sans", sans-serif;
+  color: #222;
+}
+
+h1, h2, h3, h4, h5, h6,
+.page__title,
+.archive__item-title,
+.masthead__menu-item {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+               Arial, "PingFang SC", "Microsoft YaHei", "Noto Sans",
+               "Liberation Sans", sans-serif;
+  font-weight: 600;
+}
+
 /* ===== Publications Style (Custom) ===== */
 
 .pub-venue {
@@ -69,6 +89,26 @@
 
 .pub-links a:hover {
   text-decoration: underline;
+}
+
+/* Under-review status: red */
+.pub-venue--under-review {
+  color: #c62828;
+  font-weight: 600;
+}
+
+.pub-venue--under-review i {
+  color: inherit;
+}
+
+/* Accepted status: optional darker emphasis */
+.pub-venue--accepted {
+  color: #333;
+  font-weight: 600;
+}
+
+.pub-venue--accepted i {
+  color: inherit;
 }
 
 /* optional：让每篇论文更像卡片 */
