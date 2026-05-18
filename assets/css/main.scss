@@ -111,9 +111,14 @@ h1, h2, h3, h4, h5, h6,
 
 .pub-venue {
   font-size: 13px;
-  color: #666;
+  color: #c62828 !important;
+  font-weight: 600;
   margin-top: -6px;
   margin-bottom: 4px;
+}
+
+.pub-venue i {
+  color: #c62828 !important;
 }
 
 .pub-authors {
