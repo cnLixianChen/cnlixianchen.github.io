@@ -202,7 +202,6 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
 
-
 # These settings control the types of collections used by the template
 collections:
   publications:
@@ -211,11 +210,25 @@ collections:
   portfolio:
     output: true
     permalink: /:collection/:path/
+  news:
+    output: false
 
 
 # These settings control how pages and collections are included in the site
 defaults:
-  # _posts（用来做 News）
+  # _news（用来做首页 News）
+  - scope:
+      path: ""
+      type: news
+    values:
+      layout: single
+      author_profile: false
+      read_time: false
+      comments: false
+      share: false
+      related: false
+
+  # _posts（如果以后写博客再用；当前 News 不依赖它）
   - scope:
       path: ""
       type: posts
@@ -244,7 +257,7 @@ defaults:
       author_profile: true
       share: false
       comments: false
-
+      
 # Sass/SCSS
 sass:
   sass_dir: _sass
