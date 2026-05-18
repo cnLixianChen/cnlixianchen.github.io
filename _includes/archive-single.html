@@ -16,7 +16,8 @@
 
     <!-- Venue / Status -->
     {% if post.collection == 'publications' and post.venue %}
-      <p class="pub-venue {% if post.status == 'under-review' %}pub-venue--under-review{% endif %}">
+      {% assign venue_lower = post.venue | downcase %}
+      <p class="pub-venue {% if venue_lower contains 'under review' %}pub-venue--under-review{% elsif venue_lower contains 'accepted' %}pub-venue--accepted{% endif %}">
         <i>{{ post.venue }}</i>
       </p>
     {% endif %}
