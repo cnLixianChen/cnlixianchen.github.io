@@ -19,14 +19,16 @@ I am currently engaged in research on robust and generalizable machine learning 
 This homepage summarizes my recent work, including publications and ongoing research projects.
 {% endcomment %}
 
+
 ## News
 
 <div class="home-news">
 <ul>
-{% for post in site.posts limit:2 %}
+{% assign sorted_news = site.news | sort: "date" | reverse %}
+{% for item in sorted_news limit:5 %}
   <li>
-    <span class="home-news-date">[{{ post.date | date: "%Y.%m" }}]</span>
-    {{ post.content | markdownify | remove: '<p>' | remove: '</p>' }}
+    <span class="home-news-date">[{{ item.date | date: "%Y.%m" }}]</span>
+    {{ item.content | markdownify | remove: '<p>' | remove: '</p>' }}
   </li>
 {% endfor %}
 </ul>
