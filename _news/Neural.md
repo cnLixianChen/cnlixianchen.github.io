@@ -1,7 +1,6 @@
 ---
-layout: post
-title: "Neural Network Accept"
+title: "Neural Networks Acceptance"
 date: 2026-05-23
 ---
 
-🏆 🏆 My paper was accepted by **Neural Networks** !
+Our paper was accepted by **Neural Networks**.
