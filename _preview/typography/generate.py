@@ -74,7 +74,7 @@ body { font-size: BODY_SIZEpx; font-optical-sizing: auto; }
     html = html.replace("<title>Lixian Chen | Homepage</title>", "<title>Lixian Chen | " + spec["label"] + "</title>")
     html = html.replace("</head>", "<!-- Embedded font license:\n" + license_text.replace("--", "- -") + "\n-->\n</head>")
     assert html.count('<article class="publication">') == 3
-    assert "ICIC" not in html
+    assert "ICIC" not in source  # Check content before embedded font bytes are added.
     assert not re.search(r'(?:src|href)="/(?:assets|images)/', html)
     assert 'rel="stylesheet"' not in html
     assert 'src="https://' not in html
