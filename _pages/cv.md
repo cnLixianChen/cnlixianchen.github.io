@@ -1,64 +1,11 @@
 ---
-layout: archive
-title: "CV"
+layout: academic
+title: "Curriculum Vitae"
 permalink: /cv/
-author_profile: true
 redirect_from:
   - /resume
 ---
-
-{% include base_path %}
-
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
-
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
-
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
-
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+<header class="subpage-heading"><a class="quiet-link" href="{{ '/' | relative_url }}">← Back to homepage</a><h1>Lixian Chen<span class="name-period">.</span></h1><p>Incoming graduate student at Southeast University · Fall 2027</p><p>Advisor: <a href="https://cs.seu.edu.cn/weixs/main.htm">Prof. Xiu-Shen Wei (魏秀参)</a></p><p><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a> · <a href="{{ site.author.googlescholar }}">Google Scholar</a></p></header>
+<section class="content-section" aria-labelledby="cv-education"><div class="section-heading"><h2 id="cv-education">Education</h2></div>{% include academic-education.html %}</section>
+<section class="content-section" aria-labelledby="cv-research"><div class="section-heading"><h2 id="cv-research">Research Interests</h2></div><p>Multimodal learning, vision-language models, test-time adaptation, and geometric learning in hyperbolic spaces.</p></section>
+<section class="content-section" aria-labelledby="cv-publications"><div class="section-heading"><h2 id="cv-publications">Publications</h2><span class="section-note"><sup>*</sup> Equal contribution</span></div>{% include academic-publications.html %}</section>

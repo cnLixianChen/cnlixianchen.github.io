@@ -1,0 +1,22 @@
+<div class="publication-list">
+{% assign sorted_publications = site.publications | sort: "order" %}
+{% for post in sorted_publications %}
+  <article class="publication">
+    <div class="publication-year"><time datetime="{{ post.date | date: '%Y' }}">{{ post.date | date: "%Y" }}</time><span class="paper-index" aria-hidden="true">0{{ forloop.index }}</span></div>
+    <div class="publication-copy">
+      <h3>{{ post.title | escape }}</h3>
+      <p class="authors">{{ post.citation | escape | replace: "Lixian Chen", "<strong>Lixian Chen</strong>" | replace: "*", "<sup>*</sup>" }}</p>
+      <p class="venue">{{ post.venue | escape }}</p>
+      {% if post.paperurl or post.arxiv or post.code or post.slidesurl or post.bibtexurl %}
+      <div class="paper-links">
+        {% if post.paperurl %}<a href="{{ post.paperurl }}">Paper ↗</a>{% endif %}
+        {% if post.arxiv %}<a href="{{ post.arxiv }}">arXiv ↗</a>{% endif %}
+        {% if post.code %}<a href="{{ post.code }}">Code ↗</a>{% endif %}
+        {% if post.slidesurl %}<a href="{{ post.slidesurl }}">Slides ↗</a>{% endif %}
+        {% if post.bibtexurl %}<a href="{{ post.bibtexurl }}">BibTeX ↗</a>{% endif %}
+      </div>
+      {% endif %}
+    </div>
+  </article>
+{% endfor %}
+</div>

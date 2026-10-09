@@ -1,0 +1,53 @@
+name: Build homepage preview
+on:
+  pull_request:
+    paths:
+      - "_pages/**"
+      - "_layouts/**"
+      - "_includes/**"
+      - "_publications/**"
+      - "_news/**"
+      - "_config.yml"
+      - "assets/academic/**"
+      - ".github/workflows/homepage-preview.yml"
+permissions:
+  contents: read
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build Jekyll site
+        uses: actions/jekyll-build-pages@v1
+        with:
+          future: true
+      - name: Check generated homepage and prepare portable preview
+        shell: python
+        run: |
+          from pathlib import Path
+          import re, shutil
+          html = Path("_site/index.html").read_text()
+          assert len(re.findall(r'<article class="publication">', html)) == 3
+          assert "ICIC" not in html
+          assert "Southeast University" in html and "Xiu-Shen Wei" in html
+          assert "2023–2027" in html and "2027–" in html
+          assert "Currently enrolled" in html and "Incoming" in html
+          for page in ("publications/index.html", "cv/index.html"):
+              assert Path("_site", page).is_file(), page
+          preview = Path("homepage-preview")
+          preview.mkdir()
+          shutil.copytree("_site/assets/academic", preview / "assets/academic")
+          (preview / "images").mkdir()
+          shutil.copyfile("_site/images/name.jpg", preview / "images/name.jpg")
+          portable = html.replace('href="/assets/', 'href="assets/').replace('src="/assets/', 'src="assets/').replace('src="/images/', 'src="images/')
+          portable = portable.replace('href="/#', 'href="#').replace('href="/"', 'href="preview.html"')
+          portable = portable.replace('href="/publications/"', 'href="#publications"')
+          (preview / "preview.html").write_text(portable, encoding="utf-8")
+          print("Build checked: education, advisor, three publications, no ICIC, publications and CV routes.")
+      - name: Upload portable homepage preview
+        uses: actions/upload-artifact@v4
+        with:
+          name: homepage-preview
+          path: homepage-preview
+          retention-days: 14

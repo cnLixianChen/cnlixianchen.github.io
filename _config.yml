@@ -12,7 +12,7 @@ site_theme               : "default" # The available themes options are "default
 title                    : "Lixian Chen"
 title_separator          : "-"
 name                     : &name "Lixian Chen"
-description              : &description "Research in Multimodal Learning, Vision-Language Models, and Graph Neural Learning.."   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "Lixian Chen — incoming graduate student at Southeast University, advised by Prof. Xiu-Shen Wei. Undergraduate at Guangdong University of Technology."   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : "https://cnlixianchen.github.io" # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -24,9 +24,9 @@ repository               : "cnlixianchen/cnlixianchen.github.io"
 author:
   avatar           : "name.jpg"
   name             : "Lixian Chen"
-  bio              : "Undergraduate focusing on Multimodal Learning, Vision-Language Models."
+  bio              : "Incoming graduate student at Southeast University (Fall 2027). Undergraduate at GDUT."
   location         : "Guangzhou, China"
-  employer         : "GDUT"
+  employer         : "Southeast University (incoming)"
   email            : "lix.chen41@gmail.com"
 
   googlescholar    : "https://scholar.google.com/citations?user=K8QeF58AAAAJ"
