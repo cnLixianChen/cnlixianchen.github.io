@@ -14,6 +14,7 @@ SPECS = json.loads(Path("_preview/typography/specs.json").read_text())
 FONT_REF = "2eb0b48d5f760f62e286216f0859a8c540dbc1bd"
 source = (ROOT / "index.html").read_text()
 base_css = (ROOT / "assets/academic/styles.css").read_text()
+base_css = re.sub(r"@font-face\s*\{[^}]*\}", "", base_css)  # Each standalone option embeds its own font.
 theme_js = (ROOT / "assets/academic/theme.js").read_text()
 
 def data_url(path):

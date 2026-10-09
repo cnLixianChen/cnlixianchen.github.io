@@ -9,7 +9,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 button{font:inherit}
 [hidden]{display:none!important}
 ::selection{background:var(--wash);color:var(--accent)}
-.shell{width:min(1020px,calc(100% - 64px));margin-inline:auto}
+.shell{width:calc(100% - clamp(40px,12vw,240px));margin-inline:auto}
 .skip-link{position:fixed;z-index:100;top:10px;left:10px;transform:translateY(-160%);background:var(--surface);padding:10px 18px;border:1px solid var(--accent)}
 .skip-link:focus{transform:none}
 .site-header{border-top:3px solid var(--accent);border-bottom:1px solid var(--line);background:var(--paper);position:sticky;top:0;z-index:10}
@@ -155,4 +155,30 @@ h1{font-size:35px;margin-bottom:12px}
 .shell{width:100%}
 .main-content{padding:0}
 .publication,.education-row{break-inside:avoid}
+}
+
+/* Compact default typography; alternative font previews are generated separately. */
+@font-face{font-family:SiteInter;src:url("./inter.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+:root{--sans:SiteInter,-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;--serif:var(--sans)}
+body{font-size:16px;font-optical-sizing:auto}
+.profile h1,.subpage-heading h1{font-family:var(--sans);font-size:36px;font-weight:600;letter-spacing:-.025em;line-height:1.22}
+.wordmark{font-family:var(--sans);font-size:18px;font-weight:500;letter-spacing:-.02em}
+.eyebrow{text-transform:none;font-size:10px;letter-spacing:.035em;font-weight:500}
+.bio p{font-size:16px;line-height:1.85}
+.section-heading h2{font-family:var(--sans);font-size:24px;font-weight:600;letter-spacing:-.02em}
+.education-copy h3{font-family:var(--sans);font-size:20px;font-weight:500;letter-spacing:-.015em}
+.publication h3{font-size:18px;font-weight:500;letter-spacing:-.012em}
+.paper-index{font-family:var(--sans);font-size:22px;font-weight:400}
+@media(max-width:700px){
+.profile h1,.subpage-heading h1{font-size:29px}
+.wordmark{font-size:17px}
+.bio p{font-size:15px}
+.section-heading h2{font-size:22px}
+.education-copy h3{font-size:19px}
+.publication h3{font-size:17px}
+}
+@media(max-width:450px){
+.eyebrow{font-size:8px;letter-spacing:.02em}
+.section-heading h2{font-size:21px}
+.education-copy h3{font-size:18px}
 }
