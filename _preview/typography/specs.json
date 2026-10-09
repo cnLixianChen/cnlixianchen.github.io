@@ -1,0 +1,44 @@
+[
+  {
+    "id": "A-inter",
+    "label": "A · Inter",
+    "font": "ofl/inter/Inter[opsz,wght].ttf",
+    "name": 36,
+    "nameWeight": 600,
+    "heading": 24,
+    "headingWeight": 600,
+    "school": 20,
+    "paper": 18,
+    "body": 16,
+    "tracking": "-.025em",
+    "mobile": 29
+  },
+  {
+    "id": "B-source-sans",
+    "label": "B · Source Sans 3",
+    "font": "ofl/sourcesans3/SourceSans3[wght].ttf",
+    "name": 38,
+    "nameWeight": 500,
+    "heading": 26,
+    "headingWeight": 500,
+    "school": 22,
+    "paper": 19,
+    "body": 16.5,
+    "tracking": "-.015em",
+    "mobile": 31
+  },
+  {
+    "id": "C-manrope",
+    "label": "C · Manrope",
+    "font": "ofl/manrope/Manrope[wght].ttf",
+    "name": 35,
+    "nameWeight": 500,
+    "heading": 24,
+    "headingWeight": 550,
+    "school": 20,
+    "paper": 18,
+    "body": 15.5,
+    "tracking": "-.025em",
+    "mobile": 28
+  }
+]
