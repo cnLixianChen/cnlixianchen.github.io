@@ -15,7 +15,7 @@ const specs = require(path.resolve('_preview/typography/specs.json'));
     if (target !== rootDir && !target.startsWith(rootDir + path.sep)) { res.writeHead(403); res.end(); return; }
     if (fs.existsSync(target) && fs.statSync(target).isDirectory()) target = path.join(target, 'index.html');
     if (!fs.existsSync(target)) { res.writeHead(404); res.end(); return; }
-    const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.woff2': 'font/woff2' };
+    const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.woff2': 'font/woff2', '.ttf': 'font/ttf' };
     res.setHeader('Content-Type', types[path.extname(target)] || 'application/octet-stream');
     res.end(fs.readFileSync(target));
   });
@@ -24,8 +24,10 @@ const specs = require(path.resolve('_preview/typography/specs.json'));
   const production = await browser.newPage({ viewport: { width: 1920, height: 1080 } });
   await production.goto(url);
   await production.evaluate(() => document.fonts.ready);
-  assert(await production.evaluate(() => document.fonts.check('16px SiteInter')), 'Default site font must load');
-  assert.equal(await production.locator('#profile-name').evaluate(el => getComputedStyle(el).fontSize), '36px');
+  assert(await production.evaluate(() => document.fonts.check('16px SiteManrope')), 'Default site font must load');
+  assert.equal(await production.locator('#profile-name').evaluate(el => getComputedStyle(el).fontSize), '35px');
+  assert.equal(await production.locator('#profile-name').evaluate(el => getComputedStyle(el).fontWeight), '500');
+  assert.equal(await production.locator('.bio p').first().evaluate(el => getComputedStyle(el).fontSize), '15.5px');
   assert((await production.locator('link[rel="icon"]').getAttribute('href')).endsWith('/pikachu.svg'));
   assert((await (await production.request.get(url + '/assets/academic/pikachu.svg')).text()).includes('Pikachu'));
   await production.screenshot({ path: 'typography-screenshots/default-wide-desktop.png', fullPage: true });
@@ -42,7 +44,7 @@ const specs = require(path.resolve('_preview/typography/specs.json'));
   console.log('LAYOUT_PREVIEW_BASE64=' + layoutShot.toString('base64'));
   await production.close();
   await new Promise(resolve => server.close(resolve));
-  console.log('PASS production: compact Inter typography, Pikachu favicon, fluid width and no overflow at 320–2560px.');
+  console.log('PASS production: selected C / Manrope typography, Pikachu favicon, fluid width and no overflow at 320–2560px.');
 
   let baseline;
   const crops = [];
