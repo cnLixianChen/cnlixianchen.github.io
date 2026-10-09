@@ -67,7 +67,8 @@ body { font-size: BODY_SIZEpx; font-optical-sizing: auto; }
     for key, value in replacements.items():
         override = override.replace(key, str(value))
     html = re.sub(r'<link rel="stylesheet"[^>]+>', lambda m: "<style>\n" + base_css + override + "\n</style>", source)
-    html = re.sub(r'<script src="[^"]+" defer></script>', lambda m: "<script>\n" + theme_js + "\n</script>", html)
+    html = re.sub(r'<script src="[^"]+" defer></script>', "", html)
+    html = html.replace("</body>", "<script>\n" + theme_js + "\n</script>\n</body>")
     html = re.sub(r'(?:src|href)="(/(?:assets/academic|images)/[^"]+)"',
                   lambda m: m.group(0).split("=")[0] + '="' + data_url(m.group(1)) + '"', html)
     html = html.replace('href="/#', 'href="#').replace('href="/"', 'href="#top"').replace('href="/publications/"', 'href="#publications"')
