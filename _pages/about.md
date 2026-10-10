@@ -12,7 +12,7 @@ redirect_from:
   <div class="profile-copy">
     <p class="eyebrow">Multimodal learning &amp; geometric learning</p>
     <h1 id="profile-name">Lixian Chen<span class="name-period">.</span></h1>
-    <p class="profile-role">Incoming Graduate Student</p>
+    <p class="profile-role">Incoming M.S. Student</p>
     <p class="profile-school"><a href="https://www.seu.edu.cn/">Southeast University</a><span class="status-pill">Fall 2027</span></p>
     <div class="contact-links">
       <a href="mailto:{{ site.author.email }}"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg>{{ site.author.email }}</a>
@@ -22,7 +22,7 @@ redirect_from:
 </section>
 
 <section class="bio" aria-label="About Lixian Chen">
-  <p>I have been admitted to <a href="https://www.seu.edu.cn/">Southeast University</a> through the recommendation-based graduate admission scheme and will join in <strong>Fall 2027</strong>, advised by <a href="https://cs.seu.edu.cn/weixs/main.htm">Prof. Xiu-Shen Wei (魏秀参)</a>. I am currently completing my undergraduate studies at <a href="https://www.gdut.edu.cn/">Guangdong University of Technology</a>.</p>
+  <p>I have been admitted to <a href="https://www.seu.edu.cn/">Southeast University</a> through the recommendation-based graduate admission scheme and will join in <strong>Fall 2027</strong>, advised by <a href="https://cs.seu.edu.cn/weixs/main.htm">Prof. Xiu-Shen Wei </a>. I am currently completing my undergraduate studies at <a href="https://www.gdut.edu.cn/">Guangdong University of Technology</a>.</p>
   <p>My research focuses on <strong>multimodal learning</strong> and <strong>vision-language models</strong>, with particular interests in test-time adaptation and geometric learning in hyperbolic spaces.</p>
   <ul class="research-tags" aria-label="Research interests"><li>Multimodal Learning</li><li>Vision-Language Models</li><li>Test-Time Adaptation</li><li>Geometric Learning</li></ul>
 </section>
