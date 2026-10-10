@@ -12,17 +12,15 @@ redirect_from:
     <img class="portrait"
          src="{{ '/images/name.jpg' | relative_url }}"
          alt="Lixian Chen"
-         width="180"
-         height="180"
+         width="280"
+         height="280"
          fetchpriority="high">
-    <span class="portrait-caption">LIXIAN CHEN</span>
   </div>
 
   <div class="profile-copy">
-    <p class="eyebrow">Multimodal Learning &amp; Model Robustness</p>
-    <h1 id="profile-name">Lixian Chen<span class="name-period">.</span></h1>
-    <p class="profile-role">Incoming M.S. Student</p>
-    <p class="profile-school">
+    <h1 id="profile-name">Lixian Chen</h1>
+    <p class="profile-role"><svg class="detail-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m2 8 10-5 10 5-10 5L2 8Zm4 3v6c4 3 8 3 12 0v-6M22 8v7"/></svg>Incoming M.S. Student</p>
+    <p class="profile-school"><svg class="detail-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 9 9-6 9 6H3Zm2 2v8m5-8v8m4-8v8m5-8v8M3 21h18"/></svg>
       <a href="https://www.seu.edu.cn/">Southeast University</a>
       <span class="status-pill">Fall 2027</span>
     </p>

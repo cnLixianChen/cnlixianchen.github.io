@@ -27,9 +27,15 @@ const specs = require(path.resolve('_preview/typography/specs.json'));
   assert(await production.evaluate(() => document.fonts.check('16px SiteManrope')), 'Default site font must load');
   assert.equal(await production.locator('#profile-name').evaluate(el => getComputedStyle(el).fontSize), '35px');
   assert.equal(await production.locator('#profile-name').evaluate(el => getComputedStyle(el).fontWeight), '500');
-  assert.equal(await production.locator('.bio p').first().evaluate(el => getComputedStyle(el).fontSize), '15.5px');
+  assert.equal(await production.locator('.bio p').first().evaluate(el => getComputedStyle(el).fontSize), '18px');
   assert((await production.locator('link[rel="icon"]').getAttribute('href')).endsWith('/pikachu.svg'));
   assert((await (await production.request.get(url + '/assets/academic/pikachu.svg')).text()).includes('Pikachu'));
+  assert.equal(await production.locator('body').evaluate(el => getComputedStyle(el).backgroundColor), 'rgb(255, 255, 255)');
+  assert((await production.locator('.portrait').boundingBox()).width >= 240, 'Desktop portrait must have a balanced visual size');
+  await production.getByRole('button', { name: 'Switch to dark theme' }).click();
+  assert.equal(await production.locator('html').getAttribute('data-theme'), 'dark');
+  await production.screenshot({ path: 'typography-screenshots/default-dark-desktop.png', fullPage: true });
+  await production.getByRole('button', { name: 'Switch to light theme' }).click();
   await production.screenshot({ path: 'typography-screenshots/default-wide-desktop.png', fullPage: true });
   for (const width of [320, 375, 768, 1440, 1920, 2560]) {
     await production.setViewportSize({ width, height: 1000 });
@@ -39,12 +45,14 @@ const specs = require(path.resolve('_preview/typography/specs.json'));
       assert(box.width / width >= 0.85, 'Desktop content area must fill at least 85% of viewport');
     }
   }
-  await production.setViewportSize({ width: 1440, height: 1000 });
+  await production.setViewportSize({ width: 375, height: 900 });
+  await production.screenshot({ path: 'typography-screenshots/default-mobile.png', fullPage: true });
+  await production.setViewportSize({ width: 1440, height: 1100 });
   const layoutShot = await production.screenshot({ type: 'jpeg', quality: 80 });
   console.log('LAYOUT_PREVIEW_BASE64=' + layoutShot.toString('base64'));
   await production.close();
   await new Promise(resolve => server.close(resolve));
-  console.log('PASS production: selected C / Manrope typography, Pikachu favicon, fluid width and no overflow at 320–2560px.');
+  console.log('PASS production: refined Manrope layout, Pikachu favicon, fluid width and no overflow at 320–2560px.');
 
   let baseline;
   const crops = [];
