@@ -5,7 +5,7 @@ permalink: /cv/
 redirect_from:
   - /resume
 ---
-<header class="subpage-heading"><h1>Lixian Chen<span class="name-period">.</span></h1><p>Incoming graduate student at Southeast University · Fall 2027</p><p>Advisor: Prof. Xiu-Shen Wei (魏秀参)</p><p>{{ site.author.email }} · Google Scholar</p></header>
+<header class="subpage-heading"><h1>Lixian Chen<span class="name-period">.</span></h1><p>Incoming graduate student at Southeast University · Fall 2027</p><p>Advisor: Prof. Xiu-Shen Wei</p><p>{{ site.author.email }} · Google Scholar</p></header>
 
 
 <section class="content-section" aria-labelledby="cv-education"><div class="section-heading"><h2 id="cv-education">Education</h2></div>{% include academic-education.html links=false %}</section>
