@@ -52,22 +52,14 @@ jobs:
           name: homepage-preview
           path: homepage-preview
           retention-days: 14
-      - name: Generate three standalone typography variants
-        run: python3 _preview/typography/generate.py
       - name: Install browser for typography review
         run: |
           npm install --prefix "$RUNNER_TEMP/type-preview" --no-package-lock playwright@1.56.1
           node "$RUNNER_TEMP/type-preview/node_modules/playwright/cli.js" install --with-deps chromium
-      - name: Render and check desktop and mobile typography
+      - name: Compare reference typography and check responsive layouts
         env:
           PLAYWRIGHT_MODULE: ${{ runner.temp }}/type-preview/node_modules/playwright
         run: node _preview/typography/review.cjs
-      - name: Upload three HTML files
-        uses: actions/upload-artifact@v4
-        with:
-          name: three-html-font-options
-          path: typography-variants/*.html
-          retention-days: 30
       - name: Upload typography screenshots
         uses: actions/upload-artifact@v4
         if: always()
