@@ -41,7 +41,7 @@ html[data-theme="dark"] .portrait{box-shadow:0 24px 54px -18px rgba(0,0,0,.55)}
 .contact-links a:hover{background:var(--wash);border-color:var(--muted);text-decoration:none}
 .contact-links svg{flex-shrink:0;width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.4}
 .bio{padding-top:76px}
-.bio p{max-width:100ch;font-family:var(--serif);font-size:17px;font-weight:400;line-height:1.72;letter-spacing:0;margin-bottom:16px;text-wrap:pretty}
+.bio p{max-width:none;font-family:var(--serif);font-size:17px;font-weight:400;line-height:1.72;letter-spacing:0;margin-bottom:16px;text-wrap:pretty}
 .bio strong{font-weight:700;color:var(--heading)}
 .bio a{text-decoration:underline;text-decoration-color:#b8beb7;text-decoration-thickness:1px}
 .research-tags{display:flex;flex-wrap:wrap;gap:6px 22px;list-style:none;padding:0;margin:30px 0 0;color:var(--muted)}
@@ -72,8 +72,8 @@ html[data-theme="dark"] .portrait{box-shadow:0 24px 54px -18px rgba(0,0,0,.55)}
 .publication{display:grid;grid-template-columns:100px minmax(0,1fr);gap:28px;padding:32px 0;border-bottom:1px solid var(--line)}
 .publication-year{padding-top:4px;font-size:13px;font-variant-numeric:tabular-nums;color:var(--muted)}
 .paper-index{display:none}
-.publication h3{max-width:85ch;margin:0 0 10px;color:var(--heading);font-family:var(--serif);font-size:20px;font-weight:400;line-height:1.36;letter-spacing:0;text-wrap:balance}
-.authors{max-width:110ch;margin-bottom:10px;font-size:14px;line-height:1.6;color:var(--muted)}
+.publication h3{max-width:none;margin:0 0 10px;color:var(--heading);font-family:var(--serif);font-size:20px;font-weight:400;line-height:1.36;letter-spacing:0;text-wrap:balance}
+.authors{max-width:none;margin-bottom:10px;font-size:14px;line-height:1.6;color:var(--muted)}
 .authors strong{color:var(--ink);font-weight:600}
 sup{font-size:.7em;vertical-align:super;line-height:0}
 .venue{margin:0;color:var(--muted);font-size:14px;font-weight:400}
@@ -83,7 +83,7 @@ sup{font-size:.7em;vertical-align:super;line-height:0}
 .site-footer>div{display:flex;flex-wrap:wrap;gap:24px}
 .subpage-heading{margin-bottom:48px}
 .subpage-heading p{color:var(--muted);font-size:16px}
-@media(min-width:1800px){.bio p{max-width:110ch}.main-content{padding-top:112px}.bio{padding-top:88px}}
+@media(min-width:1800px){.bio p{max-width:none}.main-content{padding-top:112px}.bio{padding-top:88px}}
 @media(max-width:900px){
 .main-content{padding-top:64px}
 .profile{grid-template-columns:190px minmax(0,1fr);gap:36px}
