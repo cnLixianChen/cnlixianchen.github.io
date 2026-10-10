@@ -51,6 +51,10 @@ const assert = require('node:assert/strict');
   for (const width of [320, 375, 520, 620, 768, 1440, 1920, 2560]) {
     await page.setViewportSize({ width, height: 1100 });
     await reference.setViewportSize({ width, height: 1100 });
+    // Chromium may acknowledge viewport resizing before media queries reach the next frame.
+    await Promise.all([page, reference].map(p => p.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))))));
+    assert.equal(await page.evaluate(() => innerWidth), width);
+    assert.equal(await reference.evaluate(() => innerWidth), width);
     const styles = [];
     for (const [label, ours, theirs] of pairs) {
       const actual = await readStyle(page.locator(ours));
