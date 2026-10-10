@@ -2,11 +2,11 @@
   <article class="education-row education-row--incoming">
     <div class="education-date"><span>2027–</span><span class="date-note">Incoming</span></div>
     <div class="school-mark"><img src="{{ '/assets/academic/seu.svg' | relative_url }}" alt="" width="64" height="64" loading="lazy"></div>
-    <div class="education-copy"><h3><a href="https://www.seu.edu.cn/">Southeast University</a></h3><p class="school-name-cn" lang="zh-CN">东南大学</p><p>Graduate studies · Admitted by recommendation</p><p class="advisor">Advisor: Prof. Xiu-Shen Wei </p></div>
+    <div class="education-copy"><h3>{% if include.links == false %}Southeast University{% else %}<a href="https://www.seu.edu.cn/">Southeast University</a>{% endif %}</h3><p class="school-name-cn" lang="zh-CN">东南大学</p><p>Graduate studies · Admitted by recommendation</p><p class="advisor">Advisor: Prof. Xiu-Shen Wei </p></div>
   </article>
   <article class="education-row">
     <div class="education-date"><span>2023–2027</span><span class="date-note">Expected</span></div>
     <div class="school-mark"><img src="{{ '/assets/academic/gdut.png' | relative_url }}" alt="" width="64" height="64" loading="lazy"></div>
-    <div class="education-copy"><h3><a href="https://www.gdut.edu.cn/">Guangdong University of Technology</a></h3><p class="school-name-cn" lang="zh-CN">广东工业大学</p><p>Undergraduate studies · Currently enrolled</p></div>
+    <div class="education-copy"><h3>{% if include.links == false %}Guangdong University of Technology{% else %}<a href="https://www.gdut.edu.cn/">Guangdong University of Technology</a>{% endif %}</h3><p class="school-name-cn" lang="zh-CN">广东工业大学</p><p>Undergraduate studies · Currently enrolled</p></div>
   </article>
 </div>
