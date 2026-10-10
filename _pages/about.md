@@ -48,7 +48,7 @@ redirect_from:
     I will join
     <a href="https://www.seu.edu.cn/">Southeast University</a>
     as a master's student in <strong>Fall 2027</strong>,
-    where I will be advised by Prof. Xiu-Shen Wei.
+    where I will be advised by <a class="advisor-link" href="https://cs.seu.edu.cn/weixs/main.htm">Prof. Xiu-Shen Wei</a>.
     I am currently completing my undergraduate studies at Guangdong University of Technology.
   </p>
 
