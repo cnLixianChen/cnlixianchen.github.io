@@ -12,8 +12,8 @@ redirect_from:
     <img class="portrait"
          src="{{ '/images/profile-photography.jpg' | relative_url }}"
          alt="Lixian Chen photographing a track and field event"
-         width="280"
-         height="280"
+         width="1706"
+         height="1279"
          fetchpriority="high">
   </div>
 

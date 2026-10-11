@@ -26,8 +26,8 @@ button{font:inherit}
 .main-content{padding:94px 0 96px}
 .profile{display:grid;grid-template-columns:clamp(220px,17vw,280px) minmax(0,1fr);gap:clamp(48px,4.5vw,88px);align-items:center}
 .profile-copy{min-width:0}
-.portrait-wrap{margin:0;position:relative;aspect-ratio:1;overflow:hidden;border-radius:8px;box-shadow:0 24px 54px -18px rgba(28,35,30,.19)}
-.portrait{display:block;width:100%;height:100%;aspect-ratio:1;object-fit:cover;object-position:70% 50%;transform:scale(1.9);transform-origin:77% 82%}
+.portrait-wrap{margin:0;position:relative;overflow:hidden;border-radius:8px;box-shadow:0 24px 54px -18px rgba(28,35,30,.19)}
+.portrait{display:block;width:100%;height:auto}
 html[data-theme="dark"] .portrait-wrap{box-shadow:0 24px 54px -18px rgba(0,0,0,.55)}
 .profile h1,.subpage-heading h1{margin:0 0 16px;color:var(--heading);font-family:var(--serif);font-size:42px;font-weight:500;letter-spacing:0;line-height:1.12}
 .profile-role,.profile-school{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:17px;font-weight:400;line-height:1.55}
