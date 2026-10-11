@@ -26,9 +26,9 @@ button{font:inherit}
 .main-content{padding:94px 0 96px}
 .profile{display:grid;grid-template-columns:clamp(220px,17vw,280px) minmax(0,1fr);gap:clamp(48px,4.5vw,88px);align-items:center}
 .profile-copy{min-width:0}
-.portrait-wrap{margin:0}
-.portrait{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:8px;box-shadow:0 24px 54px -18px rgba(28,35,30,.19)}
-html[data-theme="dark"] .portrait{box-shadow:0 24px 54px -18px rgba(0,0,0,.55)}
+.portrait-wrap{margin:0;position:relative;aspect-ratio:1;overflow:hidden;border-radius:8px;box-shadow:0 24px 54px -18px rgba(28,35,30,.19)}
+.portrait{display:block;width:100%;height:100%;aspect-ratio:1;object-fit:cover;object-position:70% 50%;transform:scale(1.9);transform-origin:77% 82%}
+html[data-theme="dark"] .portrait-wrap{box-shadow:0 24px 54px -18px rgba(0,0,0,.55)}
 .profile h1,.subpage-heading h1{margin:0 0 16px;color:var(--heading);font-family:var(--serif);font-size:42px;font-weight:500;letter-spacing:0;line-height:1.12}
 .profile-role,.profile-school{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:17px;font-weight:400;line-height:1.55}
 .profile-role{margin-bottom:10px}
@@ -155,7 +155,7 @@ html{scroll-padding-top:115px}
 .site-header,.theme-button,.skip-link,.site-footer{display:none!important}
 :root,html[data-theme="dark"]{--paper:#fff;--surface:#fff;--ink:#000;--muted:#444;--accent:#333;--line:#ddd}
 .shell{width:100%}.main-content{padding:0}.profile{grid-template-columns:140px 1fr}.bio{padding-top:30px}.content-section{margin-top:30px}
-.publication,.education-row{break-inside:avoid}.portrait{box-shadow:none}
+.publication,.education-row{break-inside:avoid}.portrait-wrap{box-shadow:none}
 }
 
 @media(max-width:390px){.profile h1{font-size:30px}.profile-role,.profile-school{font-size:14px}}

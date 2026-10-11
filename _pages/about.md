@@ -10,8 +10,8 @@ redirect_from:
 <section class="profile" aria-labelledby="profile-name">
   <div class="portrait-wrap">
     <img class="portrait"
-         src="{{ '/images/name.jpg' | relative_url }}"
-         alt="Lixian Chen"
+         src="{{ '/images/profile-photography.jpg' | relative_url }}"
+         alt="Lixian Chen photographing a track and field event"
          width="280"
          height="280"
          fetchpriority="high">
