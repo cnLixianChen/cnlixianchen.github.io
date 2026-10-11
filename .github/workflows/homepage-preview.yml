@@ -10,6 +10,7 @@ on:
       - "_news/**"
       - "_config.yml"
       - "assets/academic/**"
+      - "images/profile-photography.jpg"
       - ".github/workflows/homepage-preview.yml"
 permissions:
   contents: read
@@ -40,7 +41,7 @@ jobs:
           preview.mkdir()
           shutil.copytree("_site/assets/academic", preview / "assets/academic")
           (preview / "images").mkdir()
-          shutil.copyfile("_site/images/name.jpg", preview / "images/name.jpg")
+          shutil.copyfile("_site/images/profile-photography.jpg", preview / "images/profile-photography.jpg")
           portable = html.replace('href="/assets/', 'href="assets/').replace('src="/assets/', 'src="assets/').replace('src="/images/', 'src="images/')
           portable = portable.replace('href="/#', 'href="#').replace('href="/"', 'href="preview.html"')
           portable = portable.replace('href="/publications/"', 'href="#publications"')

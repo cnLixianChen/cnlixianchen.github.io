@@ -22,7 +22,7 @@ repository               : "cnlixianchen/cnlixianchen.github.io"
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
-  avatar           : "name.jpg"
+  avatar           : "profile-photography.jpg"
   name             : "Lixian Chen"
   bio              : "Incoming graduate student at Southeast University (Fall 2027). Undergraduate at GDUT."
   location         : "Guangzhou, China"
